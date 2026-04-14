@@ -1,6 +1,5 @@
-export const API_BASE = import.meta.env.VITE_API_BASE_URL as string;
+export const API_BASE = import.meta.env.VITE_API_BASE_URL ?? 'https://localhost:7001';
 const BASE_URL = `${API_BASE}/api`;
-
 const getToken = (): string | null => localStorage.getItem('token');
 
 const buildHeaders = (isAuth: boolean): HeadersInit => {
